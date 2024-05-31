@@ -91,7 +91,17 @@ function updateCartTotal() {
   let total = 0;
 
   //Add code here to loop get the total amount
-  
+  for (let i = 0; i < cartRows.length; i++) {
+    let cartRow = cartRows[i];
+    let priceElement = cartRow.querySelector(".cart-price");
+    let quantityElement = cartRow.querySelector(".cart-quantity-input");
+    
+    let price = parseFloat(priceElement.innerText.replace("$", ""));
+    let quantity = parseInt(quantityElement.value);
+    
+    total += price * quantity;
+  }
+
   total = total.toFixed(2);
 
   document.querySelectorAll(".cart-total-price")[0].innerText = "$" + total;
