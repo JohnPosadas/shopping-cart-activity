@@ -79,6 +79,7 @@ function addItemToCart(title, price, imageSrc) {
   cartRow
     .querySelectorAll(".btn-danger")[0]
     .addEventListener("click", removeCartItem);
+
   cartRow
     .querySelectorAll(".cart-quantity-input")[0]
     .addEventListener("change", quantityChanged);
@@ -89,9 +90,7 @@ function updateCartTotal() {
   let cartRows = cartItemContainer.querySelectorAll(".cart-row");
   let total = 0;
 
-  for (let i = 0; i < cartRows.length; i++) {
-    //Add code here to loop in all the albums that is added to the cart and get the total amount
-  }
+  //Add code here to loop get the total amount
 
   total = total.toFixed(2);
 
